@@ -7,6 +7,7 @@ import { Preload } from './app/components/preload'
 import Config from './config'
 import Registry from './app/state/registry'
 import { Storage } from '@remix-project/remix-lib'
+import { Analytics } from '@vercel/analytics/react'
 
 (async function () {
   try {
@@ -20,6 +21,7 @@ import { Storage } from '@remix-project/remix-lib'
   render(
     <React.StrictMode>
       <Preload></Preload>
+      <Analytics />
     </React.StrictMode>,
     document.getElementById('root')
   )
